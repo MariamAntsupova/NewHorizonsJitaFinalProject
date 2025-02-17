@@ -1,0 +1,38 @@
+.footer {
+    background-color: #222;
+    color: #ddd; 
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Arima', serif;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #c23e09;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    background-color: #c23e09;  
+    color: black;  
+    transform: scale(1.05);  
+    border-radius: 4px;
+    padding: 2px;
+  }
+  

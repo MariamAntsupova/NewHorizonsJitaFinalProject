@@ -1,0 +1,16 @@
+<nav>
+    <div class="logo">
+        <a routerLink="/home">MA</a>
+    </div>
+    <ul class="menu full-screen">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/favourites" routerLinkActive="active">Favourites</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" (click)="burgerMenu()">&#9776;</button>
+    <ul *ngIf="showMenu" class="menu burger-menu">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/favourites" routerLinkActive="active">Favourites</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+    </ul>
+</nav>

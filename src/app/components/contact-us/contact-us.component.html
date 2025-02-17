@@ -1,0 +1,43 @@
+<div class="contact-container">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+  
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter Your Name" 
+            [(ngModel)]="name" 
+            #nameInput="ngModel" 
+            required
+          />
+          <div *ngIf="nameInput.invalid && nameInput.touched" class="error">
+            Name is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            placeholder="Enter Your Message" 
+            [(ngModel)]="message" 
+            #messageInput="ngModel" 
+            required
+          ></textarea>
+          <div *ngIf="messageInput.invalid && messageInput.touched" class="error">
+            Message is required.
+          </div>
+        </div>
+  
+        <button type="submit" class="submit" [disabled]="contactForm.invalid">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arima', serif;
+    color: #f0f0f0; 
+    background: radial-gradient(circle, rgba(50, 50, 50, 1) 0%, rgba(20, 20, 20, 1) 100%);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
