@@ -1,6 +1,14 @@
-<div *ngIf="loading">Loading...</div>
-<div class="music-cards-container" *ngIf="!loading">
+<app-search-music (searchEvent)="onSearch($event)"></app-search-music>
+
+<div *ngIf="loading">Loading...✿</div>
+
+<div *ngIf="noResults" class="no-results">
+  No results found for "{{ term }}". Please try another
+</div>
+<div class="music-cards-container" *ngIf="!loading && !noResults">
   <app-music-card *ngFor="let music of musicList" [music]="music"></app-music-card>
 </div>
-<button (click)="showMore()" >Show More</button>
-<button (click)="showLess()" [disabled]="limit <= 20">Show Less</button>
+<div *ngIf="!noResults||!loading">
+  <button (click)="showMore()">Show More</button>
+  <button (click)="showLess()" [disabled]="limit <= 20">Show Less</button>
+</div>

@@ -14,7 +14,7 @@ export class ContactUsComponent {
 
   onSubmit() {
     if (this.name.trim() && this.message.trim()) {
-      alert(`Thank you ${this.name} For Your Respond! Message Sent Successfully!`);
+      alert(`Thank you ${this.name} For Your Respond! ❤ Message Sent Successfully!`);
       this.clearForm();
     }
   }

@@ -16,7 +16,7 @@ export class MusicService {
 
   getAllMusic(term: string = 'pink-floyd'): Observable<MusicCard[]> {
     return this.http
-      .get<{ results: MusicCard[] }>(`${this.apiUrl}?term=${term}`)
+      .get<{ results: MusicCard[] }>(`${this.apiUrl}?term=${term}&media=music`)
       .pipe(map((response) => response.results)); 
   }
 
