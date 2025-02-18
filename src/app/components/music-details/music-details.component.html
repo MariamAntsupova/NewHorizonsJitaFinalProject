@@ -1,1 +1,11 @@
-<p>music-details works!</p>
+<div *ngIf="musicDetail" class="music-detail-container">
+  <h1 class="track-name">{{ musicDetail.trackName }}</h1>
+  <p class="artist">Artist: <span>{{ musicDetail.artistName }}</span></p>
+  <p class="album">Album: <span>{{ musicDetail.collectionName }}</span></p>
+  <p class="release-date">Release Date: <span>{{ musicDetail.releaseDate }}</span></p>
+  <p class="genre">Genre: <span>{{ musicDetail.primaryGenreName }}</span></p>
+  <img [src]="musicDetail.artworkUrl100" alt="{{ musicDetail.trackName }}" class="music-image">
+  <audio controls class="music-audio">
+      <source [src]="musicDetail.previewUrl" type="audio/mpeg">
+  </audio>
+</div>

@@ -1,0 +1,57 @@
+.music-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.track-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.artist, .album, .release-date, .genre {
+    font-size: 16px;
+    color: white;
+    margin: 8px 0;
+}
+
+.artist span, .album span, .release-date span, .genre span {
+    font-weight: bold;
+    color: #c23e09;
+}
+
+.music-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.music-audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .music-detail-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    .track-name {
+        font-size: 24px;
+    }
+    .music-image {
+        width: 200px;
+        height: 200px;
+    }
+}

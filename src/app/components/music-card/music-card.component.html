@@ -1,1 +1,11 @@
-<p>music-card works!</p>
+<div class="music-card">
+    <img [src]="music.artworkUrl60" (click)="goToDetails(music.trackId)" alt="{{ music.trackName }}" class="music-image">
+    <h3>{{ music.trackName }}</h3>
+    <p>{{ music.artistName }}</p>
+    <p>{{ music.collectionName }}</p>
+    <audio controls>
+        <source [src]="music.previewUrl" type="audio/mpeg">
+      </audio>
+    <button (click)="addToFavorites(music)" >Add to Favourites ♡</button>
+  </div>
+  

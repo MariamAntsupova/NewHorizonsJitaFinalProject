@@ -1,1 +1,6 @@
-<p>musics-list works!</p>
+<div *ngIf="loading">Loading...</div>
+<div class="music-cards-container" *ngIf="!loading">
+  <app-music-card *ngFor="let music of musicList" [music]="music"></app-music-card>
+</div>
+<button (click)="showMore()" >Show More</button>
+<button (click)="showLess()" [disabled]="limit <= 20">Show Less</button>

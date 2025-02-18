@@ -1,1 +1,20 @@
-<p>favourites works!</p>
+<div class="favourites-container">
+  <h2>Favourite Music</h2>
+  <div *ngIf="favourites.length === 0">
+    <p>You have no favourite music yet.</p>
+  </div>
+
+  <div *ngIf="favourites.length > 0" class="music-list-container">
+    <div *ngFor="let music of favourites" class="music-card">
+      <img [src]="music.artworkUrl60" (click)="goToDetails(music.trackId)" alt="{{ music.trackName }}" class="music-image">
+      
+      <div class="music-card-content">
+        <h3>{{ music.trackName }}</h3>
+        <p>{{ music.artistName }}</p>
+        <p>{{ music.collectionName }}</p>
+      </div>
+
+      <button (click)="removeFromFavorites(music)">Remove</button>
+    </div>
+  </div>
+</div>
